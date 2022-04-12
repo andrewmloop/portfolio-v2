@@ -1,9 +1,10 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Navbar from "../components/sections/Navbar";
 
 export default function Home() {
   return (
-    <div>
-  )
+    <div id="page-wrapper" className="h-screen bg-gray-500">
+      <Navbar />
+      <div>Home</div>
+    </div>
+  );
 }
