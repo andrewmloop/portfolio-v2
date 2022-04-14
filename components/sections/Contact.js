@@ -75,7 +75,7 @@ export default function Contact() {
 
 
   return (
-    <div id="contact" className="h-screen bg-indigo-900">
+    <div id="contact" className="h-screen bg-cetacean">
       <form onSubmit={(e) => handleSubmit(e)}>
         <div>
           <label htmlFor="name">Name</label>
