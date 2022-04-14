@@ -4,7 +4,17 @@ module.exports = {
     "./components/**/*.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "navy": "#070663",
+        "cetacean": "#080738",
+        "dark-brown": "#664322",
+        "light-navy":"#1A1A8F",
+        "dirty-amber": "DBAE00",
+        "prussian-blue": "#063553",
+        "gold": "#A57403"
+      }
+    },
   },
   plugins: [],
-}
+};

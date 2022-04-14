@@ -9,7 +9,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="sticky top-0 w-full p-2 lg:p-4 bg-blue-800">
+    <div className="sticky top-0 w-full p-2 lg:p-4 bg-blue-800 z-10">
       <nav className="flex justify-between items-center">
         {/* Logo/Name */}
         <div className="p-2 lg:p-4 text-white">
