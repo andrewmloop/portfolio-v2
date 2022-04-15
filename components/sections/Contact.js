@@ -75,40 +75,47 @@ export default function Contact() {
 
 
   return (
-    <div id="contact" className="h-screen bg-cetacean">
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <div>
-          <label htmlFor="name">Name</label>
-          <input id="name" name="name" type="text" value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          {errors.name && <p>Please enter a name.</p>}
-        </div>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input id="email" name="email" type="email" value={email}
-            onChange={(e) => setEmail(e.target.value)} 
-          />
-          {errors.email && <p>Please enter a valid email.</p>}
-        </div>
-        <div>
-          <label htmlFor="subject">Subject</label>
-          <input id="subject" name="subject" type="text" value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-          />
-          {errors.subject && <p>Please enter a subject.</p>}
-        </div>
-        <div>
-          <label>Message</label>
-          <textarea id="message" name="message" value={message}
-            onChange={(e) => setMessage(e.target.value)} 
-          ></textarea>
-          {errors.message && <p>Please enter a message.</p>}
-        </div>
-        <button type="submit">{buttonText}</button>
-        {showSuccessMessage && <p>Message sent. Thank you!</p>}
-        {showErrorMessage && <p>Failed to send message.</p>}
-      </form>
+    <div id="contact" className="w-full h-auto px-4 py-8 text-white bg-cetacean">
+      <div className="max-w-[1000px] mx-auto">
+        <h2 className="text-2xl">Send me a message</h2>
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <div className="flex flex-col w-full py-2">
+            <label htmlFor="name" className="py-1">Name</label>
+            <input id="name" name="name" type="text" value={name}
+              onChange={(e) => setName(e.target.value)}
+              className={`text-black px-2 py-1 rounded-md border-4 border-white focus:outline-none focus:border-gold ${errors.name && "border-2 border-red-500"}`}
+            />
+            {errors.name && <p className="mt-1 text-red-500">Please enter a name.</p>}
+          </div>
+          <div className="flex flex-col w-full py-2">
+            <label htmlFor="email" className="py-1">Email</label>
+            <input id="email" name="email" type="email" value={email}
+              onChange={(e) => setEmail(e.target.value)} 
+              className={`text-black px-2 py-1 rounded-md border-4 border-white focus:outline-none focus:border-gold ${errors.email && "border-2 border-red-500"}`}
+            />
+            {errors.email && <p className="mt-1 text-red-500">Please enter a valid email.</p>}
+          </div>
+          <div className="flex flex-col w-full py-2">
+            <label htmlFor="subject" className="py-1">Subject</label>
+            <input id="subject" name="subject" type="text" value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              className={`text-black px-2 py-1 rounded-md border-4 border-white focus:outline-none focus:border-gold ${errors.subject && "border-2 border-red-500"}`}
+            />
+            {errors.subject && <p className="mt-1 text-red-500">Please enter a subject.</p>}
+          </div>
+          <div className="flex flex-col w-full py-2">
+            <label htmlFor="message" className="py-1">Message</label>
+            <textarea id="message" name="message" value={message}
+              onChange={(e) => setMessage(e.target.value)} 
+              className={`text-black px-2 py-1 rounded-md border-4 border-white focus:outline-none focus:border-gold ${errors.message && "border-2 border-red-500"}`}
+            ></textarea>
+            {errors.message && <p className="mt-1 text-red-500">Please enter a message.</p>}
+          </div>
+          <button type="submit" className="bg-gold my-2 px-6 py-2 rounded-md">{buttonText}</button>
+          {showSuccessMessage && <p  className="mt-1 text-green-500">Message sent. Thank you!</p>}
+          {showErrorMessage && <p className="mt-1 text-red-500">Failed to send message.</p>}
+        </form>
+      </div>
     </div>
   );
 }

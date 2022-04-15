@@ -16,19 +16,6 @@ module.exports = {
         "bronze": "#8f7143",
         "dark-bronze": "#8f7143"
       },
-      keyframes: {
-        spinAndGrow: {
-          from: {
-            transform: "rotate(0deg) scale(1)"
-          },
-          to: {
-            transform: "rotate(360deg) scale(1.05)"
-          }
-        }
-      },
-      animation: {
-        spinAndGrow: "spinAndGrow 1s ease-in-out"
-      }
     },
   },
   plugins: [],
