@@ -75,7 +75,7 @@ export default function Contact() {
 
 
   return (
-    <div id="contact" className="w-full h-auto px-4 py-8 text-white bg-cetacean">
+    <section id="contact" className="w-full h-auto px-4 py-8 text-white bg-cetacean">
       <div className="max-w-[1000px] mx-auto">
         <h2 className="text-2xl">Send me a message</h2>
         <form onSubmit={(e) => handleSubmit(e)}>
@@ -116,6 +116,6 @@ export default function Contact() {
           {showErrorMessage && <p className="mt-1 text-red-500">Failed to send message.</p>}
         </form>
       </div>
-    </div>
+    </section>
   );
 }
