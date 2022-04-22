@@ -1,6 +1,7 @@
 import Image from "next/image";
 import MoodTrackSS from "/public/screenshots/mood-track-750.png";
-import PokemonMemGame from "/public/screenshots/pokemon-mem-game-1000.png";
+import PokemonMemGameSS from "/public/screenshots/pokemon-mem-game-1000.png";
+import UncommonGreensSS from "/public/screenshots/uncommon-greens-1000.png";
 
 export default function Projects() {
   const featuredProjects = [
@@ -21,7 +22,7 @@ export default function Projects() {
       githubLink: "",
       liveLink: "",
       description: "A business site for Un/Common Greens LLC. - a business offering sustainably grown food. Built with NextJS for quick navigation between pages and styled with TailwindCSS.",
-      image: "",
+      image: UncommonGreensSS,
       alt: "A screenshot of the Un/Common Greens LLC. home page.",
       tags: ["NextJS", "TailwindCSS"]
     },
@@ -39,7 +40,7 @@ export default function Projects() {
       githubLink: "https://github.com/andrewmloop/pokemon-memory-game",
       liveLink: "https://andrewmloop.github.io/pokemon-memory-game/",
       description: "A simple memory game inspired by the Pokemon franchise and built with ReactJS.",
-      image: PokemonMemGame,
+      image: PokemonMemGameSS,
       alt: "A screenshot of a memory game inspired by the Pokemon franchise.",
       tags: ["React"]
     },
@@ -92,7 +93,7 @@ function ProjectItem(props) {
     <div className="flex flex-col bg-cetacean rounded-md">
       <div className="relative lg:left-[-20px] lg:top-[-20px] text-[0px] mb-2  scale-100 transition-transform duration-300 lg:hover:scale-105">
         {proj.image && 
-        <Image src={proj.image} alt={proj.alt} blur
+        <Image src={proj.image} alt={proj.alt} placeholder="blur"
           className="rounded-t-md lg:rounded-md" />
         }
       </div>
