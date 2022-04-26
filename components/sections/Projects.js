@@ -61,7 +61,7 @@ export default function Projects() {
       <div className="max-w-[1000px] flex flex-col mx-auto my-8">
         {/* Featured Projects */}
         <div>
-          <h3 className="mb-6 lg:mb-12 text-3xl text-center">Featured Projects</h3>
+          <h2 className="mb-6 lg:mb-12 text-3xl text-center">Featured Projects</h2>
           <div className="flex flex-col">
             { 
               featuredProjects.map( (project, i) => {
@@ -72,7 +72,7 @@ export default function Projects() {
         </div>
         {/* Other Projects */}
         <div className="max-w-[1000px] flex flex-col mx-auto my-10">
-          <h3 className="mb-6 lg:mb-12 text-3xl text-center">Other Projects</h3>
+          <h2 className="mb-6 lg:mb-12 text-3xl text-center">Other Projects</h2>
           <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:gap-16 lg:mx-6">
             { 
               otherProjects.map( (project, i) => {

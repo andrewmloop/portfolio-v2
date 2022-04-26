@@ -10,8 +10,8 @@ export default function Hero() {
       <div className="relative h-full w-full p-4 flex flex-col justify-center z-[4] text-center text-xl lg:text-2xl">
         <p className="mt-auto">Hi, I&apos;m</p>
         <h1 className="text-2xl font-bold mb-2 lg:text-4xl">Andrew Loop</h1>
-        <p>A web developer interested in making fun web-things and climbing life&apos;s mountains. </p>
-        <a href="#projects" className="mt-auto mb-4 py-4 flex justify-center animate-pulse z-10 md:mb-8">
+        <p>A web developer interested in making quality web-things and climbing life&apos;s mountains. </p>
+        <a href="#about" className="mt-auto mb-4 py-4 flex justify-center animate-pulse z-10 md:mb-8">
           <Image 
             src="/icons/arrow-down-circle.png" alt="Arrow icon pointing down."
             height={36}
