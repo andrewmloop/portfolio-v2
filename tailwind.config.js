@@ -16,6 +16,9 @@ module.exports = {
         "bronze": "#8f7143",
         "dark-bronze": "#8f7143"
       },
+      backgroundImage: {
+        "hero-bg": "url('../public/PurpleFirewatchHD.jpg')",
+      }
     },
   },
   plugins: [],

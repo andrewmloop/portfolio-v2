@@ -19,3 +19,105 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.hero-div-1 {
+  position: absolute;
+  left: 5vw;
+  top: 70%;
+  transform: translateY(-70%);
+
+  height: 30vh;
+  width: 15vw;
+
+  background-position: -5vw 62%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  border-radius: .375rem;
+  z-index: 2;
+
+  animation: dd1 20s infinite;
+  animation-delay: 1s;
+}
+
+.hero-div-2 {
+  position: absolute;
+  left: 15vw;
+  top: 70%;
+  transform: translateY(-70%);
+
+  height: 50vh;
+  width: 25vw;
+
+  background-position: -15vw 60%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  border-radius: .375rem;
+  z-index: 1;
+
+  animation: dd2 20s infinite;
+  animation-delay: 1s;
+}
+
+.hero-div-3 {
+  position: absolute;
+  left: 35vw;
+  top: 50%;
+  transform: translateY(-50%);
+
+  height: 95vh;
+  width: 40vw;
+
+  background-position: -35vw 50%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  border-radius: .375rem;
+  z-index: 3;
+
+  animation: dd3 20s infinite;
+  animation-delay: 1s;
+}
+
+.hero-div-4 {
+  position: absolute;
+  left: 70vw;
+  top: 50%;
+  transform: translateY(-50%);
+
+  height: 80vh;
+  width: 25vw;
+
+  background-position: -70vw 50%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  border-radius: .375rem;
+  z-index: 1;
+
+  animation: dd4 20s infinite;
+  animation-delay: 1s;
+}
+
+@keyframes dd1 {
+  0% {
+  }
+  50% {
+    background-position: Calc(-5vw - 80px) 62%;
+  }
+}
+@keyframes dd2 {
+  0% {
+  }
+  50% {
+    background-position: Calc(-15vw - 80px) 60%;
+  }
+}
+@keyframes dd3 {
+  0% {
+  }
+  50% {
+    background-position: Calc(-35vw - 80px) 50%;
+  }
+}
+@keyframes dd4 {
+  0% {
+  }
+  50% {
+    background-position: Calc(-70vw - 80px) 50%;
+  }
+}
+

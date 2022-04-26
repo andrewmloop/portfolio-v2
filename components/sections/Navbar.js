@@ -24,7 +24,7 @@ export default function Navbar() {
 
 
   return (
-    <div className={`fixed top-0 w-full p-2 md:p-4 z-10 ${colorChange ? "bg-black" : "bg-transparent"} transition-colors duration-[250ms]`}>
+    <div className={`fixed top-0 w-full p-2 md:p-4 z-20 ${colorChange ? "bg-black" : "bg-transparent"} transition-colors duration-[250ms]`}>
       <nav className="flex justify-between items-center">
         {/* Logo/Name */}
         <div className="p-2 md:p-4">
@@ -56,7 +56,7 @@ export default function Navbar() {
             <NavItem text="Projects" dest="#projects" handleToggle={handleToggle} />
             <NavItem text="Contact" dest="#contact" handleToggle={handleToggle} />
             <button
-              className="mx-3 py-2 px-4 text-white bg-gold rounded-lg scale-100 transition-transform duration-300 hover:scale-110"
+              className="mx-3 py-2 px-4 text-white bg-gold rounded-md scale-100 transition-transform duration-300 hover:scale-110"
             >Resum&eacute;</button>
           </div>
         </div>
