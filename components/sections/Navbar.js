@@ -56,9 +56,12 @@ export default function Navbar() {
             <NavItem text="About" dest="#about" handleToggle={handleToggle} />
             <NavItem text="Projects" dest="#projects" handleToggle={handleToggle} />
             <NavItem text="Contact" dest="#contact" handleToggle={handleToggle} />
-            <button
+            <a
+              href="/aml-resume-may-2022.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mx-3 py-2 px-4 text-white bg-gold rounded-md scale-100 transition-transform duration-300 hover:scale-110"
-            >Resum&eacute;</button>
+            >Resum&eacute;</a>
           </div>
         </div>
       </nav>
