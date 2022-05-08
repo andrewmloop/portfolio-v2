@@ -2,15 +2,18 @@ import Image from "next/image";
 import MoodTrackSS from "/public/screenshots/mood-track-750.png";
 import PokemonMemGameSS from "/public/screenshots/pokemon-mem-game-1000.png";
 import UncommonGreensSS from "/public/screenshots/uncommon-greens-1000.png";
+import IronTempleRoutine from "/public/screenshots/iron-temple-routine-585.jpg";
+import IronTempleLog from "/public/screenshots/iron-temple-log-585.jpg";
+import IronTempleChart from "/public/screenshots/iron-temple-chart-585.jpg";
 
 export default function Projects() {
   const featuredProjects = [
     {
       title: "Workout Tracker",
       githubLink: "https://github.com/andrewmloop/workout-tracker",
-      liveLink: "",
-      description: "A full-stack web app built with MongoDB for a database, NodeJs and ExpressJS for the back-end API, and ReactJS for the front-end client. Javascript Web Tokens offer user-session persistence as users can record their workout progress from any browser.",
-      image: "",
+      liveLink: "https://iron-temple-app.herokuapp.com",
+      description: "A full-stack web app to build workout routines and record your progress at the gym. It's built with MongoDB for a database, NodeJs and ExpressJS for the back-end API, and ReactJS for the front-end client while JWT offers user-session management.",
+      images: [IronTempleRoutine, IronTempleLog, IronTempleChart],
       alt: "A screenshot of a workout-tracking web app.",
       tags: ["MongoDB", "NodeJS", "ExpressJS", "NextJS", "JWT", "TailwindCSS"]
     }
@@ -65,7 +68,7 @@ export default function Projects() {
           <div className="flex flex-col">
             { 
               featuredProjects.map( (project, i) => {
-                return <ProjectItem project={project} key={i} />;
+                return <FeaturedItem project={project} key={i} />;
               })
             }
           </div>
@@ -76,7 +79,7 @@ export default function Projects() {
           <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:gap-16 lg:mx-6">
             { 
               otherProjects.map( (project, i) => {
-                return <ProjectItem project={project} key={i} />;
+                return <OtherItem project={project} key={i} />;
               })
             }
           </div>
@@ -86,7 +89,69 @@ export default function Projects() {
   );
 }
 
-function ProjectItem(props) {
+function FeaturedItem(props) {
+  const proj = props.project;
+
+  return (
+    <div className="flex flex-col bg-transparent">
+      <div className="grid grid-cols-4 md:grid-cols-7 text-[0px] mb-2">
+        <div className="md:px-8 lg:px-12 col-start-1 col-end-3 md:col-end-4 row-start-1 row-end-2 z-10 scale-100 hover:z-40 hover:scale-105 transition-all duration-300">
+          <div className="rounded-2xl shadow-sm shadow-black">
+            <Image src={IronTempleRoutine} alt={proj.alt} placeholder="blur" className="rounded-2xl" />
+          </div>
+        </div>
+        <div className="md:px-8 lg:px-12 mt-4 col-start-2 md:col-start-3 col-end-4 md:col-end-6 row-start-1 row-end-2 z-20 scale-100 hover:z-40 hover:scale-105 transition-all duration-300">
+          <div className="rounded-2xl shadow-sm shadow-black">
+            <Image src={IronTempleLog} alt={proj.alt} placeholder="blur" className="rounded-2xl" />
+          </div>
+        </div>
+        <div className="md:px-8 lg:px-12 mt-8 col-start-3 md:col-start-5 col-end-5 md:col-end-8 row-start-1 row-end-2 z-30 scale-100 hover:scale-105 transition-all duration-300">
+          <div className="rounded-2xl shadow-sm shadow-black">
+            <Image src={IronTempleChart} alt={proj.alt} placeholder="blur" className="rounded-2xl" />
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col justify-start px-4 pb-4 bg-cetacean rounded-md">
+        <h4 className="text-xl font-bold py-2">{proj.title}</h4>
+        <p className="leading-relaxed mb-4">{proj.description}</p>
+        <div className="flex flex-row-reverse justify-between items-center">
+          <div className="flex justify-end">
+            {
+              proj.githubLink &&
+              <a href={proj.githubLink} target="_blank" rel="noreferrer"
+                className="mx-2 scale-100 transition-transform duration-300 hover:scale-110"
+              >
+                <Image 
+                  src="/icons/github-128-gold.png" alt="Github logo." 
+                  height={40} width={40}
+                />
+              </a>
+            }
+            {
+              proj.liveLink && 
+              <a href={proj.liveLink} target="_blank" rel="noreferrer"
+                className="mx-2 scale-100 transition-transform duration-300 hover:scale-110"
+              >
+                <Image 
+                  src="/icons/linking-100-gold.png" alt="An external link icon." height={40} width={40} 
+                />
+              </a>
+            }
+          </div>
+          <div className="flex flex-wrap justify-start">
+            {
+              proj.tags.map( (tag, i) => {
+                return <p key={i} className="mr-3 font-light text-gray-400">{tag}</p>;
+              })
+            }
+          </div>
+        </div>
+      </div>      
+    </div>
+  );
+}
+
+function OtherItem(props) {
   const proj = props.project;
 
   return (
@@ -127,7 +192,7 @@ function ProjectItem(props) {
           <div className="flex flex-wrap justify-start">
             {
               proj.tags.map( (tag, i) => {
-                return <p key={i} className="mr-3 font-light">{tag}</p>;
+                return <p key={i} className="mr-3 font-light text-gray-400">{tag}</p>;
               })
             }
           </div>

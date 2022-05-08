@@ -29,7 +29,7 @@ a {
   height: 30vh;
   width: 15vw;
 
-  background-position: -5vw 62%;
+  background-position: -5vw 76%;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
   border-radius: .375rem;
   z-index: 2;
@@ -47,7 +47,7 @@ a {
   height: 50vh;
   width: 25vw;
 
-  background-position: -15vw 60%;
+  background-position: -15vw 77%;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
   border-radius: .375rem;
   z-index: 1;
@@ -62,10 +62,10 @@ a {
   top: 50%;
   transform: translateY(-50%);
 
-  height: 95vh;
+  height: 85vh;
   width: 40vw;
 
-  background-position: -35vw 50%;
+  background-position: -35vw 76%;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
   border-radius: .375rem;
   z-index: 3;
@@ -80,10 +80,10 @@ a {
   top: 50%;
   transform: translateY(-50%);
 
-  height: 80vh;
+  height: 75vh;
   width: 25vw;
 
-  background-position: -70vw 50%;
+  background-position: -70vw 74%;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
   border-radius: .375rem;
   z-index: 1;
@@ -96,28 +96,28 @@ a {
   0% {
   }
   50% {
-    background-position: Calc(-5vw - 80px) 62%;
+    background-position: Calc(-5vw - 100px) 76%;
   }
 }
 @keyframes dd2 {
   0% {
   }
   50% {
-    background-position: Calc(-15vw - 80px) 60%;
+    background-position: Calc(-15vw - 100px) 77%;
   }
 }
 @keyframes dd3 {
   0% {
   }
   50% {
-    background-position: Calc(-35vw - 80px) 50%;
+    background-position: Calc(-35vw - 100px) 76%;
   }
 }
 @keyframes dd4 {
   0% {
   }
   50% {
-    background-position: Calc(-70vw - 80px) 50%;
+    background-position: Calc(-70vw - 100px) 74%;
   }
 }
 

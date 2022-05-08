@@ -17,7 +17,8 @@ module.exports = {
         "dark-bronze": "#8f7143"
       },
       backgroundImage: {
-        "hero-bg": "url('../public/PurpleFirewatchHD.jpg')",
+        "hero-bg": "url('../public/kili-camp-1-indigo.jpg')",
+        "hero-vert": "url('../public/kili-camp-1-indigo-vert.jpg')",
       }
     },
   },

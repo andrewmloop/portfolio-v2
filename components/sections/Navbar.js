@@ -24,7 +24,7 @@ export default function Navbar() {
 
 
   return (
-    <div className={`fixed top-0 w-full p-2 md:p-4 z-20 ${colorChange ? "bg-black" : "bg-transparent"} transition-colors ease-linear duration-[300ms]`}>
+    <div className={`fixed top-0 w-full p-2 md:p-4 z-[100] ${colorChange ? "bg-black" : "bg-transparent"} transition-colors ease-linear duration-[300ms]`}>
       <nav className="flex justify-between items-center">
         {/* Logo/Name */}
         <div className="p-2 md:p-4">
