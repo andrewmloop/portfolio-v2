@@ -35,6 +35,7 @@ export default function Navbar() {
           onClick={handleToggle}
           className="z-[100] md:hidden"
         >
+          <span className="sr-only">{`${active ? "Close" : "Open"} main menu`}</span>
           {active ? 
             <svg xmlns="http://www.w3.org/2000/svg" width={42} height={42} viewBox="0 0 24 24" strokeWidth={2} stroke="white" fill="none" strokeLinecap="round" strokeLinejoin="round" className="stroke-gold">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
