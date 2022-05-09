@@ -167,6 +167,9 @@ function OtherItem(props) {
         <p className="leading-relaxed mb-4">{proj.description}</p>
         <div className="flex flex-row-reverse justify-between items-center">
           <div className="flex justify-end">
+            { (!proj.githubLink && !proj.liveLink) &&
+              <p className="mx-2 font-light text-gray-400">Not yet deployed</p>
+            }
             {
               proj.githubLink &&
               <a href={proj.githubLink} target="_blank" rel="noreferrer"
