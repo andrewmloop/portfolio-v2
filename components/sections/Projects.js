@@ -15,7 +15,7 @@ export default function Projects() {
       description: "A full-stack web app to build workout routines and record your progress at the gym. It's built with MongoDB for a database, NodeJs and ExpressJS for the back-end API, and ReactJS for the front-end client while JWT offers user-session management.",
       images: [IronTempleRoutine, IronTempleLog, IronTempleChart],
       alt: "A screenshot of a workout-tracking web app.",
-      tags: ["MongoDB", "NodeJS", "ExpressJS", "NextJS", "JWT", "TailwindCSS"]
+      tags: ["MongoDB", "NodeJS", "ExpressJS", "ReactJS", "JWT", "TailwindCSS"]
     }
   ];
 

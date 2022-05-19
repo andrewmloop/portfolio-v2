@@ -39,7 +39,11 @@ export default function Footer() {
         </div>
         <div className="h-[6rem] w-[6rem] bg-white rounded-full m-4">
           <div className="relative h-[4rem] w-[4rem] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-            <a>
+            <a 
+              href="/aml-resume-may-2022.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image src="/icons/resume-96-gold.png" alt="Resum&eacute; icon."
                 width={96}
                 height={96}

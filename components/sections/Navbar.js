@@ -24,7 +24,7 @@ export default function Navbar() {
 
 
   return (
-    <div className={`fixed top-0 w-full p-2 md:p-4 z-[100] ${colorChange ? "bg-black" : "bg-transparent"} transition-colors ease-linear duration-[300ms]`}>
+    <div className={`fixed top-0 w-full p-2 md:p-4 z-[100] ${colorChange ? "bg-black" : "bg-transparent"} transition-colors ease-linear duration-[150ms]`}>
       <nav className="flex justify-between items-center">
         {/* Logo/Name */}
         <div className="p-2 md:p-4">
@@ -77,7 +77,7 @@ function NavItem(props) {
   return (
     <a href={dest}
       onClick={props.handleToggle}
-      className="mb-8 md:mb-0 md:mx-1 md:px-4 text-white no-underline transition-all duration-300 hover:text-gold hover:underline"
+      className="mb-8 md:mb-0 md:mx-1 md:px-4 text-white no-underline transition-all duration-200 hover:text-gold hover:underline"
     >
       {text}
     </a>
