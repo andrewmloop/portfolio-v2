@@ -2,9 +2,9 @@ import Image from "next/image";
 import MoodTrackSS from "/public/screenshots/mood-track-750.png";
 import PokemonMemGameSS from "/public/screenshots/pokemon-mem-game-1000.png";
 import UncommonGreensSS from "/public/screenshots/uncommon-greens-1000.png";
-import IronTempleRoutine from "/public/screenshots/iron-temple-routine-585.jpg";
-import IronTempleLog from "/public/screenshots/iron-temple-log-585.jpg";
-import IronTempleChart from "/public/screenshots/iron-temple-chart-585.jpg";
+import IronTempleRoutineSS from "/public/screenshots/iron-temple-routine-642.jpg";
+import IronTempleLogSS from "/public/screenshots/iron-temple-log-642.jpg";
+import IronTempleChartSS from "/public/screenshots/iron-temple-chart-642.jpg";
 
 export default function Projects() {
   const featuredProjects = [
@@ -13,7 +13,7 @@ export default function Projects() {
       githubLink: "https://github.com/andrewmloop/workout-tracker",
       liveLink: "https://iron-temple-app.herokuapp.com",
       description: "A full-stack web app to build workout routines and record your progress at the gym. It's built with MongoDB for a database, NodeJs and ExpressJS for the back-end API, and ReactJS for the front-end client while JWT offers user-session management.",
-      images: [IronTempleRoutine, IronTempleLog, IronTempleChart],
+      images: [IronTempleRoutineSS, IronTempleLogSS, IronTempleChartSS],
       alt: "A screenshot of a workout-tracking web app.",
       tags: ["MongoDB", "NodeJS", "ExpressJS", "ReactJS", "JWT", "TailwindCSS"]
     }
@@ -94,32 +94,39 @@ function FeaturedItem(props) {
 
   return (
     <div className="flex flex-col bg-transparent">
-      <div className="grid grid-cols-4 md:grid-cols-7 text-[0px] mb-2">
-        <div className="md:px-8 lg:px-12 col-start-1 col-end-3 md:col-end-4 row-start-1 row-end-2 z-10 scale-100 hover:z-40 hover:scale-105 transition-all duration-300">
-          <div className="rounded-2xl shadow-sm shadow-black">
-            <Image src={IronTempleRoutine} alt={proj.alt} placeholder="blur" className="rounded-2xl" />
+      <div className="grid grid-cols-4 sm:grid-cols-7 text-[0px] mb-6">
+        <div className="sm:px-8 lg:px-12 col-start-1 col-end-3 sm:col-end-4 row-start-1 row-end-2 z-10 scale-100 hover:z-40 hover:scale-105 transition-all duration-300">
+          <div className="rounded-2xl shadow-md shadow-black">
+            <Image src={IronTempleRoutineSS} alt={proj.alt} placeholder="blur" className="rounded-2xl" />
           </div>
         </div>
-        <div className="md:px-8 lg:px-12 mt-4 col-start-2 md:col-start-3 col-end-4 md:col-end-6 row-start-1 row-end-2 z-20 scale-100 hover:z-40 hover:scale-105 transition-all duration-300">
-          <div className="rounded-2xl shadow-sm shadow-black">
-            <Image src={IronTempleLog} alt={proj.alt} placeholder="blur" className="rounded-2xl" />
+        <div className="sm:px-8 lg:px-12 mt-4 col-start-2 sm:col-start-3 col-end-4 sm:col-end-6 row-start-1 row-end-2 z-20 scale-100 hover:z-40 hover:scale-105 transition-all duration-300">
+          <div className="rounded-2xl shadow-md shadow-black">
+            <Image src={IronTempleChartSS} alt={proj.alt} placeholder="blur" className="rounded-2xl" />
           </div>
         </div>
-        <div className="md:px-8 lg:px-12 mt-8 col-start-3 md:col-start-5 col-end-5 md:col-end-8 row-start-1 row-end-2 z-30 scale-100 hover:scale-105 transition-all duration-300">
-          <div className="rounded-2xl shadow-sm shadow-black">
-            <Image src={IronTempleChart} alt={proj.alt} placeholder="blur" className="rounded-2xl" />
+        <div className="sm:px-8 lg:px-12 mt-8 col-start-3 sm:col-start-5 col-end-5 sm:col-end-8 row-start-1 row-end-2 z-30 scale-100 hover:scale-105 transition-all duration-300">
+          <div className="rounded-2xl shadow-md shadow-black">
+            <Image src={IronTempleLogSS} alt={proj.alt} placeholder="blur" className="rounded-2xl" />
           </div>
         </div>
       </div>
       <div className="flex flex-col justify-start px-4 pb-4 bg-cetacean rounded-md">
         <h4 className="text-xl font-bold py-2">{proj.title}</h4>
         <p className="leading-relaxed mb-4">{proj.description}</p>
-        <div className="flex flex-row-reverse justify-between items-center">
+        <div className="flex justify-between items-center">
+          <div className="flex w-[70%] flex-wrap justify-start">
+            {
+              proj.tags.map( (tag, i) => {
+                return <p key={i} className="mr-3 font-light text-gray-400">{tag}</p>;
+              })
+            }
+          </div>
           <div className="flex justify-end">
             {
               proj.githubLink &&
               <a href={proj.githubLink} target="_blank" rel="noreferrer"
-                className="mx-2 scale-100 transition-transform duration-300 hover:scale-110"
+                className="flex mx-2 scale-100 transition-transform duration-300 hover:scale-110"
               >
                 <Image 
                   src="/icons/github-128-gold.png" alt="Github logo." 
@@ -130,19 +137,12 @@ function FeaturedItem(props) {
             {
               proj.liveLink && 
               <a href={proj.liveLink} target="_blank" rel="noreferrer"
-                className="mx-2 scale-100 transition-transform duration-300 hover:scale-110"
+                className="flex mx-2 scale-100 transition-transform duration-300 hover:scale-110"
               >
                 <Image 
                   src="/icons/linking-100-gold.png" alt="An external link icon." height={40} width={40} 
                 />
               </a>
-            }
-          </div>
-          <div className="flex flex-wrap justify-start">
-            {
-              proj.tags.map( (tag, i) => {
-                return <p key={i} className="mr-3 font-light text-gray-400">{tag}</p>;
-              })
             }
           </div>
         </div>
@@ -165,15 +165,19 @@ function OtherItem(props) {
       <div className="flex flex-col justify-start px-4 pb-4">
         <h4 className="text-xl font-bold py-2">{proj.title}</h4>
         <p className="leading-relaxed mb-4">{proj.description}</p>
-        <div className="flex flex-row-reverse justify-between items-center">
-          <div className="flex justify-end">
-            { (!proj.githubLink && !proj.liveLink) &&
-              <p className="mx-2 font-light text-gray-400">Not yet deployed</p>
+        <div className="flex justify-between items-center">
+          <div className="flex w-[70%] flex-wrap justify-start">
+            {
+              proj.tags.map( (tag, i) => {
+                return <p key={i} className="mr-3 font-light text-gray-400">{tag}</p>;
+              })
             }
+          </div>
+          <div className="flex justify-end">
             {
               proj.githubLink &&
               <a href={proj.githubLink} target="_blank" rel="noreferrer"
-                className="mx-2 scale-100 transition-transform duration-300 hover:scale-110"
+                className="flex mx-2 scale-100 transition-transform duration-300 hover:scale-110"
               >
                 <Image 
                   src="/icons/github-128-gold.png" alt="Github logo." 
@@ -184,19 +188,12 @@ function OtherItem(props) {
             {
               proj.liveLink && 
               <a href={proj.liveLink} target="_blank" rel="noreferrer"
-                className="mx-2 scale-100 transition-transform duration-300 hover:scale-110"
+                className="flex mx-2 scale-100 transition-transform duration-300 hover:scale-110"
               >
                 <Image 
                   src="/icons/linking-100-gold.png" alt="An external link icon." height={40} width={40} 
                 />
               </a>
-            }
-          </div>
-          <div className="flex flex-wrap justify-start">
-            {
-              proj.tags.map( (tag, i) => {
-                return <p key={i} className="mr-3 font-light text-gray-400">{tag}</p>;
-              })
             }
           </div>
         </div>
